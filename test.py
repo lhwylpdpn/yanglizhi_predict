@@ -133,6 +133,23 @@ class SAP_clac:
     def get_result(self):
         return  self.df_pred
 
+
+    def test():
+        db = cx_Oracle.connect('ITL01/1qazxsw@10.9.5.228:1521/IDS')
+        print(db.version)
+        cursor= db.cursor()
+        table_name_1='sapsr3.ZYC_HISTORY'
+        table_name_2='sapsr3.ZYC_HISTORY_CB'
+        sql1='select TYPE,sign,zkey,year_beg,year_end,zny,werks,matnr,value,zje,sl,zsfyc,text,cpxh,cpzl,hbm,unit,zq,hxm,dj from  '+table_name_1
+        sql2='select TYPE,sign,zkey,year_beg,year_end,zny,werks,matnr,value,zje,sl,zsfyc,text,cpxh,cpzl,hbm,unit,zq,hxm,dj from  '+table_name_2
+        table_result_name_1=''
+        table_result_name_2=''
+
+
+
+        db.execute(sql)
+
+
 if __name__ == '__main__':
     obj_=SAP_clac()
     obj_.get_data_resource()
