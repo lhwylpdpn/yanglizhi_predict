@@ -12,6 +12,7 @@ import numpy as np
 import requests
 import os
 from dateutil.relativedelta import relativedelta
+from Config import Config
 path=os.path.split(os.path.realpath(__file__))[0]
 pd.set_option('display.max_columns', None)
 #显示所有行
